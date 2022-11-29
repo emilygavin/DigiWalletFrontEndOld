@@ -1,11 +1,10 @@
 {
   "expo": {
-    "name": "local-auth-fsd",
-    "slug": "local-auth-fsd",
+    "name": "local-auth",
+    "slug": "local-auth",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -18,7 +17,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Face ID is used to authenticate the user."
+      },
+      "bundleIdentifier": "com.emilygavin.localauth"
     },
     "android": {
       "adaptiveIcon": {
@@ -28,6 +31,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "93c7eca0-510c-41cf-a9f9-20a74f910072"
+      }
     }
   }
 }
